@@ -5338,7 +5338,7 @@ var app = (function () {
     			create_component(tech.$$.fragment);
     			t2 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(main, "class", "svelte-1opcr3c");
+    			attr_dev(main, "class", "grr svelte-ewqeqd");
     			add_location(main, file, 12, 0, 213);
     		},
     		l: function claim(nodes) {

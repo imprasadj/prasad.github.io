@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  height: 100vh;
+  height: auto;
   color: rgb(58, 58, 58);
   margin: 0;
   box-sizing: border-box;
@@ -24,7 +24,7 @@ body {
     #b7584c
   );
   background-size: 400% 400%;
-  background-attachment: fixed;
+
   -webkit-animation: AnimationName 10s ease infinite;
   -moz-animation: AnimationName 10s ease infinite;
   animation: AnimationName 10s ease infinite;
