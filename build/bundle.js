@@ -5340,9 +5340,9 @@ var app = (function () {
     			create_component(tech.$$.fragment);
     			t2 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(main, "class", "border svelte-18l6jgb");
+    			attr_dev(main, "class", "border svelte-1a4i1t5");
     			add_location(main, file, 14, 0, 271);
-    			attr_dev(div, "class", "grr svelte-18l6jgb");
+    			attr_dev(div, "class", "grr");
     			add_location(div, file, 13, 0, 253);
     		},
     		l: function claim(nodes) {
