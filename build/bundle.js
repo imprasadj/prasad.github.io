@@ -5314,7 +5314,6 @@ var app = (function () {
     const file = "src\\App.svelte";
 
     function create_fragment(ctx) {
-    	let div;
     	let main;
     	let tile;
     	let t0;
@@ -5331,7 +5330,6 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
     			main = element("main");
     			create_component(tile.$$.fragment);
     			t0 = space();
@@ -5340,17 +5338,14 @@ var app = (function () {
     			create_component(tech.$$.fragment);
     			t2 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(main, "class", "border svelte-95ukk0");
-    			add_location(main, file, 14, 0, 271);
-    			attr_dev(div, "class", "grr");
-    			add_location(div, file, 13, 0, 253);
+    			attr_dev(main, "class", "svelte-1opcr3c");
+    			add_location(main, file, 12, 0, 213);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, main);
+    			insert_dev(target, main, anchor);
     			mount_component(tile, main, null);
     			append_dev(main, t0);
     			mount_component(about, main, null);
@@ -5377,7 +5372,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(main);
     			destroy_component(tile);
     			destroy_component(about);
     			destroy_component(tech);
