@@ -14,8 +14,6 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
   font-family: "Jost", sans-serif;
-  /* background: linear-gradient(149deg, #54f1c8, #3a4dfc, #fcae3a);
-  background-size: 400% 400%; */
 
   background: linear-gradient(
     146deg,
@@ -25,7 +23,8 @@ body {
     #cfa345,
     #b7584c
   );
-  background-size: 500% 500%;
+  background-size: 100vw 500vh;
+  background-attachment: fixed;
 
   -webkit-animation: AnimationName 10s ease infinite;
   -moz-animation: AnimationName 10s ease infinite;
