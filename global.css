@@ -8,10 +8,6 @@ body {
   height: 100%;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: rgb(58, 58, 58);
   margin: 0;
@@ -30,7 +26,8 @@ body {
     #cfa345,
     #b7584c
   );
-  background-size: 100% 800%;
+  background-size: 500% 500%;
+  background-attachment: fixed;
 
   -webkit-animation: AnimationName 16s ease infinite;
   -moz-animation: AnimationName 16s ease infinite;
