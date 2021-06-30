@@ -25,9 +25,7 @@ body {
     #cfa345,
     #b7584c
   );
-  background-size: 400vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: 500% 500%;
 
   -webkit-animation: AnimationName 10s ease infinite;
   -moz-animation: AnimationName 10s ease infinite;
