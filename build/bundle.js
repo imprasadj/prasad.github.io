@@ -5314,13 +5314,15 @@ var app = (function () {
     const file = "src\\App.svelte";
 
     function create_fragment(ctx) {
+    	let div;
+    	let t0;
     	let main;
     	let tile;
-    	let t0;
-    	let about;
     	let t1;
-    	let tech;
+    	let about;
     	let t2;
+    	let tech;
+    	let t3;
     	let footer;
     	let current;
     	tile = new Tile({ $$inline: true });
@@ -5330,28 +5332,34 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div = element("div");
+    			t0 = space();
     			main = element("main");
     			create_component(tile.$$.fragment);
-    			t0 = space();
-    			create_component(about.$$.fragment);
     			t1 = space();
-    			create_component(tech.$$.fragment);
+    			create_component(about.$$.fragment);
     			t2 = space();
+    			create_component(tech.$$.fragment);
+    			t3 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(main, "class", "svelte-ewqeqd");
-    			add_location(main, file, 12, 0, 213);
+    			attr_dev(div, "class", "grr svelte-1p8lnmf");
+    			add_location(div, file, 11, 0, 212);
+    			attr_dev(main, "class", "svelte-1p8lnmf");
+    			add_location(main, file, 12, 0, 236);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			mount_component(tile, main, null);
-    			append_dev(main, t0);
-    			mount_component(about, main, null);
     			append_dev(main, t1);
-    			mount_component(tech, main, null);
+    			mount_component(about, main, null);
     			append_dev(main, t2);
+    			mount_component(tech, main, null);
+    			append_dev(main, t3);
     			mount_component(footer, main, null);
     			current = true;
     		},
@@ -5372,6 +5380,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(tile);
     			destroy_component(about);
