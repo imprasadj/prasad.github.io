@@ -4,7 +4,7 @@ html,
 body {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -23,12 +23,12 @@ body {
     #cfa345,
     #b7584c
   );
-  background-size: 100vw 500vh;
+  background-size: 100% 500%;
   background-attachment: fixed;
 
-  -webkit-animation: AnimationName 10s ease infinite;
+  /* -webkit-animation: AnimationName 10s ease infinite;
   -moz-animation: AnimationName 10s ease infinite;
-  animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite; */
 }
 @-webkit-keyframes AnimationName {
   0% {
