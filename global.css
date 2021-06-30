@@ -25,12 +25,13 @@ body {
     #cfa345,
     #b7584c
   );
-  background-size: 500% 500%;
+  background-size: 400vh;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 
-  -webkit-animation: AnimationName 16s ease infinite;
-  -moz-animation: AnimationName 16s ease infinite;
-  animation: AnimationName 16s ease infinite;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
 }
 @-webkit-keyframes AnimationName {
   0% {
