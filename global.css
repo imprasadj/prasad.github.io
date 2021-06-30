@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 html,
 body {
   position: relative;
@@ -12,8 +11,8 @@ body {
   color: rgb(58, 58, 58);
   margin: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
   font-family: "Jost", sans-serif;
   /* background: linear-gradient(149deg, #54f1c8, #3a4dfc, #fcae3a);
   background-size: 400% 400%; */
