@@ -8,6 +8,10 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(58, 58, 58);
   margin: 0;
