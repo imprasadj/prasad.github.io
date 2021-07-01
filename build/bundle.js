@@ -4027,12 +4027,12 @@ var app = (function () {
     			h3 = element("h3");
     			h3.textContent = "an Artist and a Music Producer.";
     			add_location(br0, file$4, 19, 18, 466);
-    			attr_dev(h1, "class", "svelte-rz3a1y");
+    			attr_dev(h1, "class", "svelte-973u29");
     			add_location(h1, file$4, 19, 8, 456);
     			add_location(br1, file$4, 19, 46, 494);
-    			attr_dev(h3, "class", "svelte-rz3a1y");
+    			attr_dev(h3, "class", "svelte-973u29");
     			add_location(h3, file$4, 20, 12, 512);
-    			attr_dev(div, "class", "title svelte-rz3a1y");
+    			attr_dev(div, "class", "title svelte-973u29");
     			add_location(div, file$4, 17, 4, 417);
     		},
     		m: function mount(target, anchor) {
@@ -4100,16 +4100,16 @@ var app = (function () {
     			t1 = space();
     			a2 = element("a");
     			create_component(iconify2.$$.fragment);
-    			attr_dev(a0, "class", "iconify svelte-rz3a1y");
+    			attr_dev(a0, "class", "iconify svelte-973u29");
     			attr_dev(a0, "href", "https://twitter.com/Astrojajaja");
     			add_location(a0, file$4, 27, 12, 703);
-    			attr_dev(a1, "class", "iconify svelte-rz3a1y");
+    			attr_dev(a1, "class", "iconify svelte-973u29");
     			attr_dev(a1, "href", "https://github.com/");
     			add_location(a1, file$4, 31, 12, 855);
-    			attr_dev(a2, "class", "iconify svelte-rz3a1y");
+    			attr_dev(a2, "class", "iconify svelte-973u29");
     			attr_dev(a2, "href", "https://spotify.com");
     			add_location(a2, file$4, 35, 12, 993);
-    			attr_dev(div, "class", "socialIcons svelte-rz3a1y");
+    			attr_dev(div, "class", "socialIcons svelte-973u29");
     			add_location(div, file$4, 26, 8, 664);
     		},
     		m: function mount(target, anchor) {
@@ -4206,13 +4206,13 @@ var app = (function () {
     			create_component(reveal1.$$.fragment);
     			if (img.src !== (img_src_value = "/avatar.webp")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "avatar");
-    			attr_dev(img, "class", "svelte-rz3a1y");
+    			attr_dev(img, "class", "svelte-973u29");
     			add_location(img, file$4, 11, 8, 244);
-    			attr_dev(p, "class", "svelte-rz3a1y");
+    			attr_dev(p, "class", "svelte-973u29");
     			add_location(p, file$4, 12, 8, 291);
-    			attr_dev(div0, "class", "avatar svelte-rz3a1y");
+    			attr_dev(div0, "class", "avatar svelte-973u29");
     			add_location(div0, file$4, 9, 4, 144);
-    			attr_dev(div1, "class", "tile svelte-rz3a1y");
+    			attr_dev(div1, "class", "tile svelte-973u29");
     			add_location(div1, file$4, 6, 0, 112);
     		},
     		l: function claim(nodes) {
