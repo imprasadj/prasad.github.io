@@ -173,6 +173,10 @@ var app = (function () {
     function empty() {
         return text('');
     }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
     function attr(node, attribute, value) {
         if (value == null)
             node.removeAttribute(attribute);
@@ -473,6 +477,19 @@ var app = (function () {
     function detach_dev(node) {
         dispatch_dev('SvelteDOMRemove', { node });
         detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
     }
     function attr_dev(node, attribute, value) {
         attr(node, attribute, value);
@@ -3681,59 +3698,181 @@ var app = (function () {
     const file$5 = "src\\components\\Navbar.svelte";
 
     function create_fragment$5(ctx) {
-    	let nav;
     	let header;
-    	let h4;
+    	let h3;
     	let t1;
-    	let icon;
+    	let nav;
+    	let ul;
+    	let li0;
+    	let a0;
+    	let t3;
+    	let li1;
+    	let a1;
+    	let t5;
+    	let a2;
+    	let t7;
+    	let div0;
+    	let icon0;
+    	let t8;
+    	let div3;
+    	let div1;
+    	let icon1;
+    	let t9;
+    	let div2;
+    	let a3;
+    	let t11;
+    	let a4;
+    	let t13;
+    	let a5;
     	let current;
+    	let mounted;
+    	let dispose;
 
-    	icon = new Icon({
-    			props: {
-    				icon: "ci:menu-duo",
-    				style: "font-size: 31px; top:50px;"
-    			},
+    	icon0 = new Icon({
+    			props: { icon: "ci:menu-duo" },
+    			$$inline: true
+    		});
+
+    	icon1 = new Icon({
+    			props: { icon: "ant-design:close-outlined" },
     			$$inline: true
     		});
 
     	const block = {
     		c: function create() {
-    			nav = element("nav");
     			header = element("header");
-    			h4 = element("h4");
-    			h4.textContent = "prasadui";
+    			h3 = element("h3");
+    			h3.textContent = "prasadui";
     			t1 = space();
-    			create_component(icon.$$.fragment);
-    			attr_dev(h4, "class", "svelte-1fwl7na");
-    			add_location(h4, file$5, 6, 8, 104);
-    			attr_dev(header, "class", "header svelte-1fwl7na");
-    			add_location(header, file$5, 5, 4, 71);
-    			add_location(nav, file$5, 4, 0, 60);
+    			nav = element("nav");
+    			ul = element("ul");
+    			li0 = element("li");
+    			a0 = element("a");
+    			a0.textContent = "intro";
+    			t3 = space();
+    			li1 = element("li");
+    			a1 = element("a");
+    			a1.textContent = "work";
+    			t5 = space();
+    			a2 = element("a");
+    			a2.textContent = "Contact";
+    			t7 = space();
+    			div0 = element("div");
+    			create_component(icon0.$$.fragment);
+    			t8 = space();
+    			div3 = element("div");
+    			div1 = element("div");
+    			create_component(icon1.$$.fragment);
+    			t9 = space();
+    			div2 = element("div");
+    			a3 = element("a");
+    			a3.textContent = "intro";
+    			t11 = space();
+    			a4 = element("a");
+    			a4.textContent = "work";
+    			t13 = space();
+    			a5 = element("a");
+    			a5.textContent = "contact";
+    			attr_dev(h3, "class", "logo svelte-5px4hh");
+    			add_location(h3, file$5, 15, 4, 258);
+    			attr_dev(a0, "href", "/");
+    			attr_dev(a0, "class", "svelte-5px4hh");
+    			add_location(a0, file$5, 18, 16, 349);
+    			attr_dev(li0, "class", "svelte-5px4hh");
+    			add_location(li0, file$5, 18, 12, 345);
+    			attr_dev(a1, "href", "/");
+    			attr_dev(a1, "class", "svelte-5px4hh");
+    			add_location(a1, file$5, 21, 16, 487);
+    			attr_dev(li1, "class", "svelte-5px4hh");
+    			add_location(li1, file$5, 21, 12, 483);
+    			attr_dev(ul, "class", "nav-links svelte-5px4hh");
+    			add_location(ul, file$5, 17, 8, 309);
+    			add_location(nav, file$5, 16, 4, 294);
+    			attr_dev(a2, "class", "contactbtn svelte-5px4hh");
+    			attr_dev(a2, "href", "/");
+    			add_location(a2, file$5, 24, 4, 545);
+    			attr_dev(div0, "class", "menu svelte-5px4hh");
+    			add_location(div0, file$5, 25, 4, 593);
+    			attr_dev(header, "class", "svelte-5px4hh");
+    			add_location(header, file$5, 14, 0, 244);
+    			attr_dev(div1, "class", "close svelte-5px4hh");
+    			add_location(div1, file$5, 30, 4, 745);
+    			attr_dev(a3, "href", "/");
+    			attr_dev(a3, "class", "svelte-5px4hh");
+    			add_location(a3, file$5, 34, 8, 900);
+    			attr_dev(a4, "href", "/");
+    			attr_dev(a4, "class", "svelte-5px4hh");
+    			add_location(a4, file$5, 37, 8, 1017);
+    			attr_dev(a5, "href", "/");
+    			attr_dev(a5, "class", "svelte-5px4hh");
+    			add_location(a5, file$5, 38, 8, 1047);
+    			attr_dev(div2, "class", "overlay-content svelte-5px4hh");
+    			add_location(div2, file$5, 33, 4, 861);
+    			attr_dev(div3, "id", "mobile-menu");
+    			attr_dev(div3, "class", "overlay svelte-5px4hh");
+    			add_location(div3, file$5, 29, 0, 701);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, nav, anchor);
-    			append_dev(nav, header);
-    			append_dev(header, h4);
+    			insert_dev(target, header, anchor);
+    			append_dev(header, h3);
     			append_dev(header, t1);
-    			mount_component(icon, header, null);
+    			append_dev(header, nav);
+    			append_dev(nav, ul);
+    			append_dev(ul, li0);
+    			append_dev(li0, a0);
+    			append_dev(ul, t3);
+    			append_dev(ul, li1);
+    			append_dev(li1, a1);
+    			append_dev(header, t5);
+    			append_dev(header, a2);
+    			append_dev(header, t7);
+    			append_dev(header, div0);
+    			mount_component(icon0, div0, null);
+    			insert_dev(target, t8, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div1);
+    			mount_component(icon1, div1, null);
+    			append_dev(div3, t9);
+    			append_dev(div3, div2);
+    			append_dev(div2, a3);
+    			append_dev(div2, t11);
+    			append_dev(div2, a4);
+    			append_dev(div2, t13);
+    			append_dev(div2, a5);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(div0, "click", /*click_handler*/ ctx[0], false, false, false),
+    					listen_dev(div1, "click", /*click_handler_1*/ ctx[1], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: noop,
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(icon.$$.fragment, local);
+    			transition_in(icon0.$$.fragment, local);
+    			transition_in(icon1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(icon.$$.fragment, local);
+    			transition_out(icon0.$$.fragment, local);
+    			transition_out(icon1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(nav);
-    			destroy_component(icon);
+    			if (detaching) detach_dev(header);
+    			destroy_component(icon0);
+    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(div3);
+    			destroy_component(icon1);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
@@ -3748,6 +3887,14 @@ var app = (function () {
     	return block;
     }
 
+    function openNav() {
+    	document.getElementById("mobile-menu").style.width = "100%";
+    }
+
+    function closeNav() {
+    	document.getElementById("mobile-menu").style.width = "0";
+    }
+
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Navbar", slots, []);
@@ -3757,8 +3904,10 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Navbar> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Icon });
-    	return [];
+    	const click_handler = () => openNav();
+    	const click_handler_1 = () => closeNav();
+    	$$self.$capture_state = () => ({ Icon, openNav, closeNav });
+    	return [click_handler, click_handler_1];
     }
 
     class Navbar extends SvelteComponentDev {
@@ -4370,7 +4519,7 @@ var app = (function () {
     			create_component(versiondiv.$$.fragment);
     			t1 = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(div, "class", "layout svelte-1su422y");
+    			attr_dev(div, "class", "layout svelte-1fawcxu");
     			add_location(div, file, 9, 2, 213);
     			add_location(main, file, 7, 0, 181);
     		},
