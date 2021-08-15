@@ -4190,7 +4190,7 @@ var app = (function () {
     			t3 = text("\r\n            Adventurer.");
     			t4 = space();
     			h3 = element("h3");
-    			h3.textContent = "Hi!,\r\n            Im Prasad Jadhav. Im passionate about Designing User Interfaces, \r\n            and Smooth Experiences. \r\n            When I’m not designing I usually Produce music, \r\n            and talk Rockets.";
+    			h3.textContent = "Hi!,\r\n            I'm Prasad. Im passionate about Designing User Interfaces\r\n            and Smooth Experiences.\r\n            Aside from designing I usually Produce music and talk Rockets.";
     			t6 = space();
     			button = element("button");
     			button.textContent = "SAY HI! 👋";
@@ -4198,13 +4198,13 @@ var app = (function () {
     			create_component(projects.$$.fragment);
     			add_location(br0, file$3, 12, 21, 263);
     			add_location(br1, file$3, 13, 22, 292);
-    			attr_dev(h1, "class", "gradient svelte-1hwjh7i");
+    			attr_dev(h1, "class", "gradient svelte-h7hq1z");
     			add_location(h1, file$3, 11, 8, 219);
-    			attr_dev(h3, "class", "svelte-1hwjh7i");
+    			attr_dev(h3, "class", "svelte-h7hq1z");
     			add_location(h3, file$3, 16, 8, 347);
-    			attr_dev(button, "class", "svelte-1hwjh7i");
-    			add_location(button, file$3, 23, 8, 606);
-    			attr_dev(section, "class", "hero svelte-1hwjh7i");
+    			attr_dev(button, "class", "svelte-h7hq1z");
+    			add_location(button, file$3, 22, 8, 580);
+    			attr_dev(section, "class", "hero svelte-h7hq1z");
     			add_location(section, file$3, 10, 4, 186);
     			add_location(div, file$3, 7, 0, 158);
     		},
@@ -4347,23 +4347,23 @@ var app = (function () {
     			create_component(icon2.$$.fragment);
     			attr_dev(a0, "href", "https://www.twitter.com/prasadui");
     			attr_dev(a0, "target", "_blank");
-    			attr_dev(a0, "class", "svelte-cshpi9");
+    			attr_dev(a0, "class", "svelte-r1rfk5");
     			add_location(a0, file$2, 7, 12, 143);
-    			attr_dev(div0, "class", "socials svelte-cshpi9");
+    			attr_dev(div0, "class", "socials svelte-r1rfk5");
     			add_location(div0, file$2, 6, 8, 108);
     			attr_dev(a1, "href", "https://dribbble.com/prasadui");
     			attr_dev(a1, "target", "_blank");
-    			attr_dev(a1, "class", "svelte-cshpi9");
+    			attr_dev(a1, "class", "svelte-r1rfk5");
     			add_location(a1, file$2, 12, 12, 356);
-    			attr_dev(div1, "class", "socials svelte-cshpi9");
+    			attr_dev(div1, "class", "socials svelte-r1rfk5");
     			add_location(div1, file$2, 11, 8, 321);
     			attr_dev(a2, "href", "https://www.behance.net/prasadui");
     			attr_dev(a2, "target", "_blank");
-    			attr_dev(a2, "class", "svelte-cshpi9");
+    			attr_dev(a2, "class", "svelte-r1rfk5");
     			add_location(a2, file$2, 17, 12, 579);
-    			attr_dev(div2, "class", "socials svelte-cshpi9");
+    			attr_dev(div2, "class", "socials svelte-r1rfk5");
     			add_location(div2, file$2, 16, 8, 544);
-    			attr_dev(div3, "class", "footer svelte-cshpi9");
+    			attr_dev(div3, "class", "footer svelte-r1rfk5");
     			add_location(div3, file$2, 5, 4, 78);
     			add_location(footer, file$2, 4, 0, 64);
     		},
