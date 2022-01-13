@@ -7,7 +7,7 @@ body {
   scroll-behavior: smooth;
   height: 100%;
   color: #333b42;
-  background: #f1f1f1;
+
   box-sizing: border-box;
   font-family: "Jost", sans-serif;
   margin: 0;
@@ -23,7 +23,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(0, 80, 160);
+  color: rgb(247, 247, 247);
 }
 
 label {
