@@ -8,10 +8,11 @@
   --textcolor: #324149;
   --Dark: #434b52;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
-  scroll-behavior: smooth;
   height: 100%;
   color: var(--Dark);
   background-color: var(--bgcolor);
